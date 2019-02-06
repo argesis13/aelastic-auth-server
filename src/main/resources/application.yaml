@@ -2,3 +2,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://argesis13:argesis13@ds155714.mlab.com:55714/testdatabase13
+
+server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: password
+    key-store-type: JKS
+    key-alias: selfsigned
+  port: 8888

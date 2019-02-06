@@ -1,12 +1,8 @@
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgij0eW8adhE1X4KDGGYl
-+2nmNVEftGn6IjZH/2/U65phRrj/q3bp4etf+0r2zskoQ3P6vD5+2dyNYS5LjDZc
-1TsAJFeM1nZvd5tsea1AKnhomfEZTbkg75fN4HdOvykdZqngfJQNu0Yr5NKrNSfB
-zjNuuWU0J0rcBJzIl1T+C5iZMnRDISDs3WIG1svTJ7HV+Nc3HkHGKZDScLvk6LQq
-AxvUzBWq6k7VQrrA3xH41NmzMrmaCS3KG/YE9ZFWZyJmko0/FxrL878tez0k123j
-NrrkNN2RMkrwRg6A5F59OrhwS8we0Ib9uo4t3OWSVlBzd89uZsfFW3vuFowH9CFP
-7QIDAQAB
------END PUBLIC KEY-----
+Bag Attributes
+    friendlyName: selfsigned
+    localKeyID: 54 69 6D 65 20 31 35 34 39 34 37 34 33 38 35 36 31 39 
+subject=/C=RO/ST=Bucharest/L=Bucharest/O=aelastic/OU=args/CN=Dan Petrescu
+issuer=/C=RO/ST=Bucharest/L=Bucharest/O=aelastic/OU=args/CN=Dan Petrescu
 -----BEGIN CERTIFICATE-----
 MIIDezCCAmOgAwIBAgIEch/4DjANBgkqhkiG9w0BAQsFADBuMQswCQYDVQQGEwJS
 TzESMBAGA1UECBMJQnVjaGFyZXN0MRIwEAYDVQQHEwlCdWNoYXJlc3QxETAPBgNV

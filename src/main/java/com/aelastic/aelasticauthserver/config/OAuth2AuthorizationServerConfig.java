@@ -30,10 +30,12 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("aelastic-web-ui")
+                .secret("{noop}")
                 .authorizedGrantTypes("password", "refresh_token", "client_credentiails")
                 .scopes("webclient")
                 .and()
                 .withClient("aelastic-mobile-app")
+                .secret("{noop}")
                 .authorizedGrantTypes("password", "refresh_token", "client_credentiails")
                 .scopes("mobileclient");
     }
@@ -53,7 +55,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         KeyPair keyPair = new KeyStoreKeyFactory(
-                new ClassPathResource("keystore.jks"), "siri0104".toCharArray()).getKeyPair("selfsigned");
+                new ClassPathResource("keystore.jks"), "password".toCharArray()).getKeyPair("selfsigned");
         converter.setKeyPair(keyPair);
         return converter;
     }
