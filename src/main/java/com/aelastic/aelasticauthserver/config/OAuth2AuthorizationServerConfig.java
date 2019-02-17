@@ -45,11 +45,15 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 .secret("{noop}")
                 .authorizedGrantTypes("password", "refresh_token", "client_credentiails")
                 .scopes("webclient")
+                .accessTokenValiditySeconds(30)
+                .refreshTokenValiditySeconds(3600)
                 .and()
                 .withClient("aelastic-mobile-app")
                 .secret("{noop}")
                 .authorizedGrantTypes("password", "refresh_token", "client_credentiails")
-                .scopes("mobileclient");
+                .scopes("mobileclient")
+        .accessTokenValiditySeconds(30)
+        .refreshTokenValiditySeconds(3600);
     }
 
     @Override // define which authentication manager and user details service should be used
@@ -63,6 +67,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 )
         );
         endpoints.tokenStore(tokenStore)
+                .tokenEnhancer(tokenEnhancerChain)
                 .accessTokenConverter(jwtAccessTokenConverter)
                 .tokenEnhancer(tokenEnhancerChain)
                 .authenticationManager(authenticationManager)

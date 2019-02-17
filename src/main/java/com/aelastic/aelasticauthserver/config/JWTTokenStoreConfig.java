@@ -1,6 +1,5 @@
 package com.aelastic.aelasticauthserver.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -47,7 +46,7 @@ public class JWTTokenStoreConfig {
 
     @Bean
     public TokenEnhancer jwtTokenEnhancer() {
-        return new JwtAccessTokenConverter();
+        return new JWTTokenEnhancer();
     }
 
 }
